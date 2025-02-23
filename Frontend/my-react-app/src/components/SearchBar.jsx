@@ -67,7 +67,6 @@ function SearchBar({ onApplyFilter, onSectionSelected, onTaskSelected, tasks, pl
         fetchSuggestions();
     }, [query, tasks]); // Update dependency array to include tasks
 
-    // Handle selection of items (tasks or sections)
     const handleSelect = (item) => {
         if (!selectedItems.some(selected => selected.id === item.id)) {
             setSelectedItems(prev => [...prev, item]);
@@ -80,7 +79,6 @@ function SearchBar({ onApplyFilter, onSectionSelected, onTaskSelected, tasks, pl
             onSectionSelected(item); // Trigger the callback with the selected section
         }
 
-        // If a task is selected, trigger the onTaskSelected callback
         if (item.type === 'task') {
             const selectedTaskData = item.fullData || item;
             const taskRelatedTags = allTags.filter(tag => selectedTaskData.tagIDs.includes(tag.id));
