@@ -10,7 +10,7 @@ const ffmpegInstaller = require('@ffmpeg-installer/ffmpeg');
 const fs = require('fs');
 const path = require('path');
 
-ffmpeg.setFfmpegPath(ffmpegInstaller.path); // Set ffmpeg path
+ffmpeg.setFfmpegPath(ffmpegInstaller.path); 
 
 const BUCKET = process.env.AWS_BUCKET_NAME;
 

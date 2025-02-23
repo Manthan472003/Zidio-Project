@@ -2,7 +2,6 @@ const cron = require('node-cron');
 const { Op } = require('sequelize');
 const Task = require('../../Database/Models/task'); 
 
-// Function to delete soft-deleted tasks older than 30 days
 const deleteOldSoftDeletedTasks = async () => {
     try {
         const currentTime = new Date();

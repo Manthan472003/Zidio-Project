@@ -1,7 +1,6 @@
 const Section = require('../../Database/Models/section');
 const  {Op} = require('sequelize');
 
-// Create a new section
 const createSection = async (req, res) => {
     try {
         const { sectionName } = req.body;
@@ -9,13 +8,11 @@ const createSection = async (req, res) => {
             return res.status(400).json({ message: 'Section name is required.' });
         }
 
-        // Check if the section already exists
         const existingSection = await Section.findOne({ where: { sectionName } });
         if (existingSection) {
             return res.status(409).json({ message: 'Section already exists.' });
         }
 
-        // Create the new section
         const newSection = await Section.create({ sectionName });
         return res.status(201).json({ message: 'Section created successfully.', newSection });
     } catch (error) {
@@ -24,7 +21,6 @@ const createSection = async (req, res) => {
     }
 };
 
-// Get all sections
 const getAllSections = async (req, res) => {
     try {
         const sections = await Section.findAll();
@@ -35,7 +31,6 @@ const getAllSections = async (req, res) => {
     }
 };
 
-// Get section by ID
 const getSectionById = async (req, res) => {
     try {
         const { id } = req.params;
@@ -59,7 +54,6 @@ const getSectionById = async (req, res) => {
 const deleteSectionById = async (req, res) => {
     try {
         const { id } = req.params;
-        // Ensure ID is valid
         if (!id || isNaN(parseInt(id))) {
             return res.status(400).json({ message: 'Invalid section ID.' });
         }
@@ -86,13 +80,11 @@ const updateSectionById = async (req, res) => {
             return res.status(400).json({ message: 'Section name is required for update.' });
         }
 
-        // Find the section to update
         const section = await Section.findOne({ where: { id } });
         if (!section) {
             return res.status(404).json({ message: 'Section not found.' });
         }
 
-        // Check if the new section name already exists and is not the same as the current one
         const existingSection = await Section.findOne({
             where: {
                 sectionName,
