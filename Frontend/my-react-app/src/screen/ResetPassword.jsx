@@ -100,7 +100,7 @@ const ResetPassword = () => {
                     width="50%"
                     height="130px"
                 />
-                <Heading color="blue.400">Plan - X</Heading>
+                <Heading color="blue.400">Zidio</Heading>
                 <Box minW={{ base: '90%', md: '468px' }}>
                     <form onSubmit={handleResetPassword}>
                         <Stack spacing={4} p="1rem" backgroundColor="whiteAlpha.900" boxShadow="md">
