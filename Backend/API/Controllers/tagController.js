@@ -12,7 +12,6 @@ const createTag = async (req, res) => {
             return res.status(400).json({ message: 'Tag name is required.' });
         }
 
-        // Check if the tag already exists
         const existingTag = await Tag.findOne({
             where: { tagName }
         });

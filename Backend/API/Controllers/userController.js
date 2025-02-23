@@ -8,7 +8,6 @@ const app = express();
 app.use(cookieParser());
 
 
-// Create a new user (with email existence check)
 const createUser = async (req, res) => {
     try {
         const { userName, email, password, userType, phoneNumber, bio, workingAs } = req.body;

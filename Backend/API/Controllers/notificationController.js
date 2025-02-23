@@ -11,9 +11,7 @@ const createNotification = async (req, res) => {
             return res.status(400).json({ message: 'Notification Text is required.' });
         }
 
-        
 
-        // Validate userIDs if provided
         if (userIds && Array.isArray(userIds)) {
             const users = await User.findAll({
                 where: {

@@ -96,7 +96,6 @@ const updateSectionById = async (req, res) => {
             return res.status(409).json({ message: 'Section already exists.' });
         }
 
-        // Update the section
         section.sectionName = sectionName;
         await section.save();
 
