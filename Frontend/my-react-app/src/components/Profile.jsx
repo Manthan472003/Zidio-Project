@@ -42,7 +42,6 @@ const Profile = () => {
     const cookies = new Cookies();
   
 
-  // const token = localStorage.getItem('token');
   const token = cookies.get("token");
 
   if (token) {

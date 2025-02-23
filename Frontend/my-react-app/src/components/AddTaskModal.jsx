@@ -92,7 +92,6 @@ const AddTaskModal = ({ isOpen, onClose, onSubmit, userId: propUserId, sectionID
         fetchUsers();
 
         if (!propUserId) {
-            // const token = localStorage.getItem('token');
             const token = cookies.get('token');
 
             if (token) {
