@@ -109,7 +109,7 @@ const Login = () => {
           width="50%"
           height="130px"
         />
-        <Heading color="blue.400">Zidio</Heading>
+        <Heading color="blue.400">Zidio Task Management</Heading>
         <Box minW={{ base: '90%', md: '468px' }}>
           <form onSubmit={handleLogin}>
             <Stack spacing={4} p="1rem" backgroundColor="whiteAlpha.900" boxShadow="md">

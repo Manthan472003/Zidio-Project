@@ -195,7 +195,7 @@ const Sidebar = ({ onSectionAdded, onTaskAdded }) => {
           fontWeight="bold"
           ml={4}
         >
-          Zidio
+          Zidio Task Management
         </Text>
       </Flex>
 

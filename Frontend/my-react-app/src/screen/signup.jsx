@@ -47,7 +47,7 @@ const Signup = () => {
   
         const emailContent = {
           email: email,
-          subject: "Welcome to Zidio",
+          subject: "Welcome to Zidio Task Management",
           text: "Thank you for signing up!",
           html: '<h1>Welcome!</h1><p>Thank you for signing up. We are glad to have you as our Team Member !!</p>',
         };
@@ -94,7 +94,7 @@ const Signup = () => {
             width="50%"
             height="130px"
           />
-          <Heading color="blue.400">Zidio</Heading>
+          <Heading color="blue.400">Zidio Task Management</Heading>
           <Box minW={{ base: '90%', md: '468px' }}>
             <form onSubmit={handleSubmit}>
               <Stack spacing={4} p="1rem" backgroundColor="whiteAlpha.900" boxShadow="md">
