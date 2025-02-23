@@ -73,7 +73,6 @@ const AddMediaTextInViewTask = ({ isOpen, onClose, taskId, onUploadComplete }) =
       return;
     }
 
-    // const token = localStorage.getItem('token');
     const token = cookies.get('token');
 
     let decoded = null;

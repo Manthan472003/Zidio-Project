@@ -21,7 +21,6 @@ const AddDailyReportModal = ({ isOpen, onClose, onSubmit }) => {
   
 
   useEffect(() => {
-    // const token = localStorage.getItem('token');
     const token = cookies.get('token');
 
     if (token) {
